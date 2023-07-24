@@ -58,6 +58,9 @@ a {
   border: 0 solid #e5e7eb;
   box-sizing: border-box;
 }
+.font-variation {
+  font-stretch: expanded;
+}
 
 .animate {
   opacity: 0;
