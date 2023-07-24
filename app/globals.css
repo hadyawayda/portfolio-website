@@ -62,7 +62,7 @@ a {
 .animate {
   opacity: 0;
   transition: all 1s;
-  transform: translateY(5%);
+  transform: translateY(10%);
 }
 .animate.mover {
   transform: translateY(50%);
@@ -70,6 +70,9 @@ a {
 .show {
   opacity: 1;
   filter: blur(0);
+  transform: translateY(0);
+}
+.show.early {
   transition-delay: 250ms;
   transform: translateY(0);
 }
