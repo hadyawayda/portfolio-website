@@ -70,26 +70,27 @@ a {
 .show {
   opacity: 1;
   filter: blur(0);
-  transform: translateY(0);
-}
-.show.early {
   transition-delay: 250ms;
   transform: translateY(0);
 }
-.show.mid {
+.show.early {
   transition-delay: 500ms;
   transform: translateY(0);
 }
-.show.late {
+.show.mid {
   transition-delay: 750ms;
   transform: translateY(0);
 }
-.show.vlate {
+.show.late {
   transition-delay: 1000ms;
   transform: translateY(0);
 }
-.show.vvlate {
+.show.vlate {
   transition-delay: 1250ms;
+  transform: translateY(0);
+}
+.show.vvlate {
+  transition-delay: 1500ms;
   transform: translateY(0);
 }
 
