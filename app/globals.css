@@ -33,6 +33,10 @@ body {
     sans-serif;
   height: 100%;
   font-family: Inter, sans-serif;
+  /* display: flex;
+  justify-content: space-between;
+  align-items: space-between;
+  flex-direction: column; */
 }
 
 a {
