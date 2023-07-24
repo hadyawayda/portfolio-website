@@ -1,6 +1,20 @@
+"use client"
+
 import Link from "next/link"
+import { useEffect } from "react"
 
 function Navbar() {
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show")
+        }
+      })
+    })
+    document.querySelectorAll(".animate").forEach((el) => observer.observe(el))
+  }, [])
+
   return (
     <div className="flex justify-between items-center w-full h-32 lg:py-10 lg:px-20">
       <Link
