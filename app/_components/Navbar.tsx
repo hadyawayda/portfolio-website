@@ -25,7 +25,7 @@ function Navbar() {
       <div className="flex justify-between items-center lg:w-96">
         <Link href="#projects" className=" animate early">
           <button className="px-4 py-2 hover:bg-black hover:text-white font-semibold text-sm rounded-full transition-all ease-in-out duration-700">
-            Contact us
+            Projects
           </button>
         </Link>
         <Link href="#projects" className="animate mid">
