@@ -100,8 +100,12 @@ a {
   transition-delay: 1750ms;
   transform: translateY(0);
 }
-.show.x4late {
+.show.xlate {
   transition-delay: 2s;
+  transform: translateY(0);
+}
+.show.x2late {
+  transition-delay: 2.25s;
   transform: translateY(0);
 }
 
