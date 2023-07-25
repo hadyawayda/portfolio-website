@@ -6,7 +6,7 @@ export default function Home() {
           Software & Web Developer
         </h1>
         <h2 className="animate vvlate text-2xl mb-6">
-          Hi, I'm Hady, an Award winning Developer based in Beirut, Lebanon.
+          Hi, I'm Hady, and I'm an aspiring Developer based in Beirut, Lebanon.
         </h2>
         <p className="animate vvvlate text-2xl mb-4">
           I love what I do, and I am very passionate about learning new
