@@ -85,8 +85,14 @@ export default function Home() {
             target="_blank"
             download="Hady Awayda Resumé.pdf"
             className="mt-8 animate xlate">
-            <button className="rounded-xl border-2 border-transparent hover:border-orange-500 hover:bg-white hover:text-orange-500 text-base bg-black py-5 px-12 tracking-widest text-white transition-all duration-500 ease-in-out">
+            <button className="flex justify-between gap-4 items-center rounded-xl border-2 border-transparent hover:border-red-500 hover:bg-red-500 hover:text-white text-base bg-gray-900 py-5 px-12 tracking-widest text-white transition-all duration-500 ease-in-out">
               Download Resumé
+              <Image
+                src="/acrobat-reader.svg"
+                alt="Acrobat Reader"
+                width={30}
+                height={30}
+              />
             </button>
           </Link>
         </div>
