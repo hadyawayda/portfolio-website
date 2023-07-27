@@ -1,5 +1,11 @@
 import Image from "next/image"
 import Link from "next/link"
+import Linkedin from "./_components/Linkedin"
+import Github from "./_components/Github"
+import Leetcode from "./_components/Leetcode"
+import Hackerrank from "./_components/Hackerrank"
+import FrontEndMentor from "./_components/FrontEndMentor"
+import CSSBattle from "./_components/Cssbattle"
 
 export default function Home() {
   return (
@@ -10,8 +16,7 @@ export default function Home() {
             Software & Web Developer
           </h1>
           <h2 className="animate vvlate text-2xl mb-6">
-            Hi, I'm Hady, and I'm an aspiring Developer based in Beirut,
-            Lebanon.
+            Hi, I'm Hady, I'm an aspiring Developer based in Beirut, Lebanon.
           </h2>
           <p className="animate vvvlate text-2xl mb-4">
             I love what I do, and I am very passionate about learning new
@@ -30,70 +35,52 @@ export default function Home() {
             <Link
               className="w-10 h-10 flex justify-center items-center"
               href="https://www.linkedin.com/in/hadyawayda">
-              <Image
-                src="/LinkedIn.svg"
-                width={30}
-                height={30}
-                alt="Linkedin"
-              />
+              <div className="w-7 h-7 flex justify-center items-center">
+                <Linkedin />
+              </div>
             </Link>
             <Link
               className="w-10 h-10 flex justify-center items-center"
               href="https://github.com/hadyawayda">
-              <Image
-                className="pt-0.5"
-                src="/Github.svg"
-                width={30}
-                height={30}
-                alt="Github"
-              />
+              <div className="w-7 h-7 flex justify-center items-center">
+                <Github />
+              </div>
             </Link>
             <Link
               className="w-10 h-10 flex justify-center items-center"
               href="https://leetcode.com/hadyawayda">
-              <Image
-                className="pl-1"
-                src="/Leetcode.svg"
-                width={30}
-                height={30}
-                alt="LeetCode"
-              />
+              <div className="w-6 h-6 pt-px flex justify-center items-center">
+                <Leetcode />
+              </div>
             </Link>
           </div>
           <div className="flex items-center justify-between w-4/12 pt-4 animate vvvlate">
             <Link
               className="w-10 h-10 flex justify-center items-center"
               href="https://www.hackerrank.com/hady_awayda">
-              <Image
-                src="/Hackerrank.svg"
-                width={28}
-                height={28}
-                alt="HackerRank"
-              />
+              <div
+                className="w-8 h-8 pt-0.5 flex justify-center items-center"
+                style={{ paddingLeft: 3 + "px" }}>
+                <Hackerrank />
+              </div>
             </Link>
             <Link
               className="w-10 h-10 flex justify-center items-center"
               href="https://www.frontendmentor.io/profile/hAdy994">
-              <Image
-                src="/FrontEnd-Mentor.svg"
-                width={28}
-                height={28}
-                alt="FrontEnd Mentor"
-              />
+              <div className="w-7 h-7 pl-px pt-0.5 flex justify-center items-center">
+                <FrontEndMentor />
+              </div>
             </Link>
             <Link
               className="w-10 h-10 flex justify-center items-center"
               href="https://cssbattle.dev/player/hady_994">
-              <Image
-                src="/cssbattle.svg"
-                width={36}
-                height={36}
-                alt="CSSBattle.dev"
-              />
+              <div className="w-9 h-9 pl-px flex justify-center items-center">
+                <CSSBattle />
+              </div>
             </Link>
           </div>
           <div className="mt-8 animate xlate">
-            <button className="rounded-2xl border-4 border-transparent hover:border-orange-500 hover:bg-white hover:text-orange-500 hover:font-black bg-black py-4 px-10 tracking-widest text-white transition-all duration-500 ease-in-out">
+            <button className="rounded-xl border-2 border-transparent hover:border-orange-500 hover:bg-white hover:text-orange-500 text-base bg-black py-5 px-12 tracking-widest text-white transition-all duration-500 ease-in-out">
               Download Resumé
             </button>
           </div>
