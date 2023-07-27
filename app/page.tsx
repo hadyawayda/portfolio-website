@@ -79,11 +79,16 @@ export default function Home() {
               </div>
             </Link>
           </div>
-          <div className="mt-8 animate xlate">
+          <Link
+            href="/Hady-Awayda-Resume.pdf"
+            rel="noopener noreferrer"
+            target="_blank"
+            download="Hady Awayda Resumé.pdf"
+            className="mt-8 animate xlate">
             <button className="rounded-xl border-2 border-transparent hover:border-orange-500 hover:bg-white hover:text-orange-500 text-base bg-black py-5 px-12 tracking-widest text-white transition-all duration-500 ease-in-out">
               Download Resumé
             </button>
-          </div>
+          </Link>
         </div>
       </section>
       <section></section>
