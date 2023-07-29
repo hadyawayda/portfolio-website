@@ -6,7 +6,7 @@ import Socials from "./_components/Socials"
 export default function Home() {
   return (
     <main className="flex flex-col justify-start items-center w-full h-full text-lg px-4">
-      <section className="flex justify-between items-start w-full">
+      <section className="flex justify-between items-start w-full gap-2">
         <div className="w-7/12 mt-20 h-full">
           <h1 className="animate vlate text-7xl w-full font-medium mb-20">
             Software & Web Developer
@@ -21,7 +21,7 @@ export default function Home() {
           </p>
           <TechStack />
         </div>
-        <div className="w-4/12 flex flex-col justify-start items-center h-full">
+        <div className="w-5/12 flex flex-col justify-start items-center h-full">
           <Image
             src="/me.jpg"
             alt="Me"
