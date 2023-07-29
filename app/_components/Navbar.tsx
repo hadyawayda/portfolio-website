@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import { useEffect } from "react"
+import Menu from "./HamMenu"
 
 function Navbar() {
   useEffect(() => {
@@ -22,18 +23,19 @@ function Navbar() {
           Hady Awayda
         </button>
       </Link>
-      <div className="flex justify-between items-center lg:w-96">
+      <Menu />
+      <div className="md:flex justify-between hidden items-center lg:w-96">
         <Link href="#projects" className=" animate early">
           <button className="px-4 py-2 hover:bg-black hover:text-white font-semibold text-base rounded-full transition-all ease-in-out duration-700">
             Projects
           </button>
         </Link>
-        <Link href="#projects" className="animate mid">
+        <Link href="#about" className="animate mid">
           <button className="px-4 py-2 hover:bg-black hover:text-white font-semibold text-base rounded-full transition-all ease-in-out duration-700">
             About me
           </button>
         </Link>
-        <Link href="#projects" className="animate late">
+        <Link href="#contact" className="animate late">
           <button className="px-4 py-2 hover:bg-black hover:text-white font-semibold text-base rounded-full transition-all ease-in-out duration-700">
             Contact me
           </button>
