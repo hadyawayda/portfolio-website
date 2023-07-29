@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <main className="flex flex-col justify-start items-center w-full h-full text-lg px-4">
       <section className="flex justify-between items-start w-full">
-        <div className="w-7/12 mt-12 h-full">
+        <div className="w-7/12 mt-20 h-full">
           <h1 className="animate vlate text-7xl w-full font-medium mb-20">
             Software & Web Developer
           </h1>
