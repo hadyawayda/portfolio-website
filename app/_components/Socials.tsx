@@ -9,7 +9,7 @@ import CSSBattle from "./SocialIcons/Cssbattle"
 function Socials() {
   return (
     <div className="flex flex-col w-full items-center justify-center">
-      <div className="flex items-center justify-between w-6/12 pt-4 animate vvlate">
+      <div className="flex items-center gap-2 md:gap-0 w-full justify-center md:w-6/12 md:pt-4 animate vvlate">
         <Link
           className="w-10 h-10 flex justify-center items-center"
           href="https://www.linkedin.com/in/hadyawayda">
@@ -32,7 +32,7 @@ function Socials() {
           </div>
         </Link>
       </div>
-      <div className="flex items-center justify-between w-6/12 pt-4 animate vvvlate">
+      <div className="flex items-center gap-2 md:gap-0 w-full justify-center md:w-6/12 md:pt-4 animate vvvlate">
         <Link
           className="w-10 h-10 flex justify-center items-center"
           href="https://www.hackerrank.com/hady_awayda">

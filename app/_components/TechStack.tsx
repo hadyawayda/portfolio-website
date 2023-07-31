@@ -4,7 +4,7 @@ import Tailwind from "./TechStackIcons/Tailwind"
 
 function TechStack() {
   return (
-    <div className="w-full flex justify-between items-center mt-5 py-12 px-4 pr-11 animate xlate">
+    <div className="w-full grid grid-cols-4 gap-x-4 gap-y-4 md:mt-5 py-4 md:py-12 md:px-4 md:pr-11 animate xlate">
       <Link href="https://en.wikipedia.org/wiki/HTML" className="flex">
         <Image src="/html.svg" alt="HTML" width={40} height={40} />
       </Link>
