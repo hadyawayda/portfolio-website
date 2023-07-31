@@ -1,10 +1,10 @@
 import "./globals.css"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+// import { Inter } from "next/font/google"
 import Footer from "./_components/Footer"
 import Navbar from "./_components/Navbar"
 
-const inter = Inter({ subsets: ["latin"] })
+// const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Hady Awayda",
@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} flex min-h-screen min-w-full flex-col items-center justify-between font-semibold text-sm scrollbar-none px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20`}>
+        className={` flex min-h-screen min-w-full flex-col items-center justify-between font-semibold text-sm scrollbar-none px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20`}>
         <Navbar />
         {children}
         <Footer />
