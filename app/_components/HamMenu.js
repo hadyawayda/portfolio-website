@@ -10,24 +10,24 @@ import "./HamburgerMenuLogo.css"
 // learn react suspense
 
 const Menu = () => {
-  const [open, setOpen] = useState("")
+  const [menu, setMenu] = useState(false)
 
-  function handleMenuToggle() {
-    open === " open" ? setOpen("") : setOpen(" open")
+  function handleMenuToggle(id) {
+    setMenu(id)
   }
   useEffect(() => {
     const body = document.querySelector("body")
 
-    if (open === " open") {
+    if (menu) {
       body.style.overflow = "hidden"
     } else {
       body.style.overflow = ""
     }
-  }, [open])
+  }, [menu])
 
   useEffect(() => {
     function handleResize() {
-      setOpen("")
+      setMenu(false)
     }
     window.addEventListener("resize", handleResize)
     return () => {
@@ -35,95 +35,64 @@ const Menu = () => {
     }
   })
 
-  useEffect(() => {
-    function handleSwipeStart(e) {
-      if (e.touches.length === 1) {
-        const touch = e.touches[0]
-        const startX = touch.pageX
-        const startY = touch.pageY
-
-        function handleSwipeMove(e) {
-          const touch = e.touches[0]
-          const deltaX = touch.pageX - startX
-          const deltaY = touch.pageY - startY
-
-          if (deltaX > 50 && Math.abs(deltaY) < 20) {
-            setOpen("")
-          }
-        }
-
-        window.addEventListener("touchmove", handleSwipeMove)
-
-        function handleSwipeEnd() {
-          window.removeEventListener("touchmove", handleSwipeMove)
-          window.removeEventListener("touchend", handleSwipeEnd)
-        }
-
-        window.addEventListener("touchend", handleSwipeEnd)
-      }
-    }
-
-    window.addEventListener("touchstart", handleSwipeStart)
-
-    return () => {
-      window.removeEventListener("touchstart", handleSwipeStart)
-    }
-  }, [])
-
   return (
-    <Popover className="md:hidden z-10" onClose={() => setOpen("")}>
-      <Popover.Button className="focus:outline-none flex justify-center items-center z-20 ">
-        <div className={"menu-btn" + open} onClick={() => handleMenuToggle()}>
-          <div className="menu-btn__burger flex justify-center"></div>
-        </div>
-      </Popover.Button>
-      <Transition
-        enter="transition-opacity ease-out duration-700"
-        enterFrom="opacity-0"
-        enterTo="opacity-100"
-        leave="transition-opacity ease-in duration-300"
-        leaveFrom="opacity-100"
-        leaveTo="opacity-0">
-        <Popover.Overlay
-          onClick={() => handleMenuToggle()}
-          className="fixed inset-0 bg-black opacity-40"
-        />
-      </Transition>
-      <Transition
-        as={Fragment}
-        enter="transition ease-out duration-500"
-        enterFrom="opacity-0 translate-x-full"
-        enterTo="opacity-100 translate-x-5"
-        leave="transition ease-in duration-300"
-        leaveFrom="opacity-100 translate-x-0"
-        leaveTo="opacity-0 translate-x-full">
-        <Popover.Panel className="fixed w-6/12 min-h-full rounded-3xl bg-white right-0 top-0">
-          <div className="flex flex-col">
-            <Link
-              href="/"
-              className="pl-16 h-32 flex items-center border-b mb-6">
-              <button className="text-white text-lg bg-black p-2.5 rounded-md tracking-wider">
-                HA
-              </button>
-            </Link>
-            <Link className="pl-10" href="#projects">
-              <button className="px-4 py-6 hover:bg-black hover:text-white font-semibold text-lg rounded-full transition-all ease-in-out duration-700">
-                Projects
-              </button>
-            </Link>
-            <Link className="pl-10" href="#about">
-              <button className="px-4 py-6 hover:bg-black hover:text-white font-semibold text-lg rounded-full transition-all ease-in-out duration-700">
-                About me
-              </button>
-            </Link>
-            <Link className="pl-10" href="#contact">
-              <button className="px-4 py-6 hover:bg-black hover:text-white font-semibold text-lg rounded-full transition-all ease-in-out duration-700">
-                Contact me
-              </button>
-            </Link>
-          </div>
-        </Popover.Panel>
-      </Transition>
+    <Popover className="md:hidden z-10">
+      {({ open }) => (
+        <>
+          <Popover.Button
+            className={
+              "focus:outline-none flex justify-center items-center z-20 menu-btn" +
+              (open ? " open" : "")
+            }
+            onClick={() => handleMenuToggle(open)}>
+            <div className="menu-btn__burger flex justify-center"></div>
+          </Popover.Button>
+          <Transition
+            enter="transition-opacity ease-out duration-700"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="transition-opacity ease-in duration-300"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0">
+            <Popover.Overlay className="fixed inset-0 bg-black opacity-40" />
+          </Transition>
+          <Transition
+            as={Fragment}
+            enter="transition ease-out duration-500"
+            enterFrom="opacity-0 translate-x-full"
+            enterTo="opacity-100 translate-x-5"
+            leave="transition ease-in duration-300"
+            leaveFrom="opacity-100 translate-x-0"
+            leaveTo="opacity-0 translate-x-full">
+            <Popover.Panel className="fixed w-6/12 min-h-full rounded-3xl bg-white right-0 top-0">
+              <div className="flex flex-col">
+                <Link
+                  href="/"
+                  className="pl-16 h-32 flex items-center border-b mb-6">
+                  <button className="text-white text-lg bg-black p-2.5 rounded-md tracking-wider">
+                    HA
+                  </button>
+                </Link>
+                <Link className="pl-10" href="#projects">
+                  <button className="px-4 py-6 hover:bg-black hover:text-white font-semibold text-lg rounded-full transition-all ease-in-out duration-700">
+                    Projects
+                  </button>
+                </Link>
+                <Link className="pl-10" href="#about">
+                  <button className="px-4 py-6 hover:bg-black hover:text-white font-semibold text-lg rounded-full transition-all ease-in-out duration-700">
+                    About me
+                  </button>
+                </Link>
+                <Link className="pl-10" href="#contact">
+                  <button className="px-4 py-6 hover:bg-black hover:text-white font-semibold text-lg rounded-full transition-all ease-in-out duration-700">
+                    Contact me
+                  </button>
+                </Link>
+              </div>
+            </Popover.Panel>
+          </Transition>
+        </>
+      )}
     </Popover>
   )
 }
@@ -162,3 +131,38 @@ export default Menu
       </div>
     </div> */
 }
+
+// useEffect(() => {
+//   function handleSwipeStart(e) {
+//     if (e.touches.length === 1) {
+//       const touch = e.touches[0]
+//       const startX = touch.pageX
+//       const startY = touch.pageY
+
+//       function handleSwipeMove(e) {
+//         const touch = e.touches[0]
+//         const deltaX = touch.pageX - startX
+//         const deltaY = touch.pageY - startY
+
+//         if (deltaX > 50 && Math.abs(deltaY) < 20) {
+//           setMenu(false)
+//         }
+//       }
+
+//       window.addEventListener("touchmove", handleSwipeMove)
+
+//       function handleSwipeEnd() {
+//         window.removeEventListener("touchmove", handleSwipeMove)
+//         window.removeEventListener("touchend", handleSwipeEnd)
+//       }
+
+//       window.addEventListener("touchend", handleSwipeEnd)
+//     }
+//   }
+
+//   window.addEventListener("touchstart", handleSwipeStart)
+
+//   return () => {
+//     window.removeEventListener("touchstart", handleSwipeStart)
+//   }
+// }, [])
