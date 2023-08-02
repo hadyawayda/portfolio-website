@@ -13,7 +13,8 @@ function Socials() {
         <Link
           className="w-10 h-10 flex justify-center items-center"
           href="https://www.linkedin.com/in/hadyawayda"
-          target="_blank">
+          target="_blank"
+          aria-label="Linkedin">
           <div className="w-5 h-5 md:w-7 md:h-7 flex justify-center items-center">
             <Linkedin />
           </div>
@@ -21,7 +22,8 @@ function Socials() {
         <Link
           className="w-10 h-10 flex justify-center items-center"
           href="https://github.com/hadyawayda"
-          target="_blank">
+          target="_blank"
+          aria-label="Github">
           <div className="w-5 h-5 md:w-7 md:h-7 flex justify-center items-center">
             <Github />
           </div>
@@ -29,7 +31,8 @@ function Socials() {
         <Link
           className="w-10 h-10 flex justify-center items-center"
           href="https://leetcode.com/hadyawayda"
-          target="_blank">
+          target="_blank"
+          aria-label="Leetcode">
           <div className="w-4 h-4 md:w-6 md:h-6 flex justify-center items-center">
             <Leetcode />
           </div>
@@ -37,7 +40,8 @@ function Socials() {
         <Link
           className="w-10 h-10 flex justify-center items-center"
           href="https://www.hackerrank.com/hady_awayda"
-          target="_blank">
+          target="_blank"
+          aria-label="Hackerrank">
           <div
             className="w-6 h-6 md:w-8 md:h-8 pt-0.5 flex justify-center items-center"
             style={{ paddingLeft: 2 + "px" }}>
@@ -47,7 +51,8 @@ function Socials() {
         <Link
           className="w-10 h-10 flex justify-center items-center"
           href="https://www.frontendmentor.io/profile/hAdy994"
-          target="_blank">
+          target="_blank"
+          aria-label="Frontend Mentor">
           <div className="w-5 h-5 md:w-7 md:h-7 pl-px pt-0.5 flex justify-center items-center">
             <FrontEndMentor />
           </div>
@@ -55,7 +60,8 @@ function Socials() {
         <Link
           className="w-10 h-10 flex justify-center items-center"
           href="https://cssbattle.dev/player/hady_994"
-          target="_blank">
+          target="_blank"
+          aria-label="CSS Battle">
           <div className="w-6 h-6 md:w-9 md:h-9 pl-px flex justify-center items-center">
             <CSSBattle />
           </div>

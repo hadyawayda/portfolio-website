@@ -33,9 +33,7 @@ export default function Home() {
               target="_blank"
               download="Hady Awayda Resumé.pdf"
               className="mt-8 animate xlate">
-              <button
-                className="flex justify-between gap-1 items-center rounded-xl hover:bg-red-600 hover:text-white text-lg bg-black tracking-wider text-white transition-all duration-500 ease-in-out"
-                style={{ padding: 18 + "px " + 40 + "px" }}>
+              <button className="flex justify-between gap-1 px-6 py-3 lg:py-3.5 xl:py-4 lg:px-7 xl:px-10 items-center rounded-xl hover:bg-red-600 hover:text-white  bg-black font-normal lg:font-semibold lg:tracking-wider text-white transition-all duration-500 ease-in-out expanded">
                 Download Resumé
                 <Image
                   src="/acrobat-reader.svg"
