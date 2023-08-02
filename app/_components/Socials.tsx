@@ -8,8 +8,8 @@ import CSSBattle from "./SocialIcons/Cssbattle"
 
 function Socials() {
   return (
-    <div className="flex flex-col w-full items-center justify-center">
-      <div className="flex items-center w-full justify-between md:w-8/12 md:pt-8 vvlate">
+    <div className="flex justify-center items-center min-w-full md:w-8/12 md:pt-8 vvlate">
+      <div className="grid grid-cols-3 gap-y-6 w-3/4 justify-items-center">
         <Link
           className="w-10 h-10 flex justify-center items-center"
           href="https://www.linkedin.com/in/hadyawayda"
@@ -34,8 +34,6 @@ function Socials() {
             <Leetcode />
           </div>
         </Link>
-      </div>
-      <div className="flex items-center w-full justify-between md:w-8/12 md:pt-6 vvvlate">
         <Link
           className="w-10 h-10 flex justify-center items-center"
           href="https://www.hackerrank.com/hady_awayda"

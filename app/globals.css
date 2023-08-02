@@ -2,7 +2,7 @@
   font-family: "Mona Sans";
   src: url("../public/Mona-Sans.woff2"), format("woff2-variations");
   font-weight: 200 900;
-  font-stretch: 75% 125%;
+  font-stretch: 125%;
 }
 
 @tailwind base;
@@ -40,7 +40,6 @@ body {
     sans-serif;
   height: 100%;
   /* font-family: Inter, sans-serif; */
-  font-family: "Mona Sans", sans-serif;
   /* display: flex;
   justify-content: space-between;
   align-items: space-between;
@@ -57,9 +56,10 @@ a {
 ::before {
   border: 0 solid #e5e7eb;
   box-sizing: border-box;
+  font-family: "Mona Sans";
 }
-.font-variation {
-  font-stretch: expanded;
+.expanded {
+  font-stretch: 125%;
 }
 
 .animate {

@@ -9,7 +9,7 @@ export default function Home() {
     <main className="flex flex-col justify-start items-center w-full h-full text-lg px-4">
       <section className="flex flex-col lg:flex-row justify-between items-start w-full gap-2">
         <div className="lg:w-7/12 mt-10 md:mt-15 lg:mt-20 h-full order-2">
-          <h1 className="animate text-center md:text-left vlate text-5xl md:text-6xl lg:text-7xl w-full font-medium lg:mb-20">
+          <h1 className="text-center lg:text-left tracking-tight vlate text-5xl md:text-6xl lg:text-7xl w-full font-medium expanded">
             Software & Web Developer
           </h1>
           <TechStack />
@@ -21,7 +21,7 @@ export default function Home() {
             technologies.
           </p>
         </div>
-        <div className="md:w-5/12 flex md:flex-col justify-center w-full md:justify-start items-center h-full order-1 md:order-3">
+        <div className="flex lg:flex-col justify-center gap-20 lg:gap-0 w-full lg:justify-start items-center h-full lg:w-4/12 xl:w-5/12  order-1 lg:order-3">
           <div className="w-72">
             <Me />
           </div>
