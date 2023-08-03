@@ -3,7 +3,7 @@ import Image from "next/image"
 
 function TechStack() {
   return (
-    <div className="w-full flex justify-start items-center md:pr-1 lg:pr-0 xl:pr-0">
+    <div className="w-full flex justify-start items-center md:pr-1 lg:pr-2 xl:pr-0">
       <div className="w-full flex gap-4  gap-y-8 md:mt-0 py-12 sm:px-5 md:py-14 lg:px-0 xlate justify-between">
         <Link href="https://en.wikipedia.org/wiki/HTML" className="flex">
           <Image src="/html.svg" alt="HTML" width={40} height={40} />
