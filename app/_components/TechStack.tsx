@@ -29,13 +29,13 @@ function TechStack() {
           />
         </Link>
         <Link href="https://react.dev" className="flex">
-          <Image src="react.svg" width={40} height={40} alt="React" />
+          <Image src="/react.svg" width={40} height={40} alt="React" />
         </Link>
         <Link href="https://nextjs.org" className="flex">
-          <Image src="nextjs2.svg" width={40} height={40} alt="NextJs" />
+          <Image src="/nextjs2.svg" width={40} height={40} alt="NextJs" />
         </Link>
         <Link href="https://tailwindcss.com" className="flex">
-          <Image src="tailwind.svg" width={50} height={50} alt="TailwindCSS" />
+          <Image src="/tailwind.svg" width={50} height={50} alt="TailwindCSS" />
         </Link>
       </div>
     </div>
