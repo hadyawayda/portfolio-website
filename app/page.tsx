@@ -4,20 +4,23 @@ import TechStack from "./_components/TechStack"
 import Socials from "./_components/Socials"
 import Me from "./_components/Me"
 import Download from "./_components/Download"
+import "./page.css"
 
 export default function Home() {
   return (
     <main className="flex flex-col justify-start items-center w-full h-full text-lg px-4">
       <section className="flex flex-col lg:flex-row justify-between items-start w-full gap-2">
         <div className="lg:w-7/12 mt-10 md:mt-15 lg:mt-20 h-full order-2">
-          <h1 className="text-center lg:text-left tracking-tight vlate text-5xl md:text-6xl lg:text-7xl w-full font-medium expanded">
-            Software & Web Developer
-          </h1>
+          <div className="">
+            <h1 className="text-center lg:text-left tracking-tight vlate text-5xl md:text-6xl lg:text-7xl cssgradient bg-contain font-medium expanded text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-blue-500 to-yellow-500">
+              Software & Web Developer
+            </h1>
+          </div>
           <TechStack />
-          <h2 className="animate vvlate text-2xl mb-8">
+          <h2 className=" font-normal vvlate text-2xl mb-8">
             Hi, I'm Hady, I'm an aspiring Developer based in Beirut, Lebanon.
           </h2>
-          <p className="animate vvvlate text-2xl">
+          <p className=" font-normal vvvlate text-2xl">
             I love what I do, and I am very passionate about learning new
             technologies.
           </p>

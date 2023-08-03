@@ -35,7 +35,7 @@ function TechStack() {
           <Image src="/nextjs2.svg" width={40} height={40} alt="NextJs" />
         </Link>
         <Link href="https://tailwindcss.com" className="flex">
-          <Image src="/tailwind.svg" width={50} height={50} alt="TailwindCSS" />
+          <Image src="/tw.svg" width={50} height={50} alt="TailwindCSS" />
         </Link>
       </div>
     </div>
