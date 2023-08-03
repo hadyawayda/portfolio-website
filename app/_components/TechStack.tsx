@@ -1,11 +1,10 @@
 import Link from "next/link"
 import Image from "next/image"
-import Tailwind from "./TechStackIcons/Tailwind"
 
 function TechStack() {
   return (
-    <div className="w-full flex justify-center items-center lg:pr-8 xl:pr-20">
-      <div className="w-full flex flex-wrap gap-9 md:gap-10 gap-y-8 md:mt-0 py-12 px-4 sm:px-5 md:py-14 md:px-10 lg:gap-9 lg:px-0 xl:gap-12  xl:px-12 xlate justify-center">
+    <div className="w-full flex justify-start items-center lg:pr-8 xl:pr-20">
+      <div className="w-full flex flex-wrap gap-9 md:gap-10 lg:gap-9 xl:gap-12 gap-y-8 md:mt-0 py-12 px-4 sm:px-5 md:py-14 md:px-10 lg:px-0  xl:px-12 xlate justify-between">
         <Link href="https://en.wikipedia.org/wiki/HTML" className="flex">
           <Image src="/html.svg" alt="HTML" width={40} height={40} />
         </Link>

@@ -1,3 +1,31 @@
 .cssgradient {
   background-size: 100%;
+  background-color: #000;
+  background-image: linear-gradient(
+    90deg,
+    #e34f26 3.5%,
+    #2965f1 17.786%,
+    #f7df1e 32.071%,
+    #3178c6 46.357%,
+    #61dafb 60.643%,
+    #000 74.929%,
+    #06b6d4 89.214%
+  );
+  background-size: 100%;
+  background-repeat: repeat;
+  animation: animet 1.75s ease forwards;
+  cursor: pointer;
+}
+
+.cssgradient:hover {
+  animation: animet 2.75s ease forwards;
+}
+
+@keyframes animet {
+  0% {
+    background-size: 650%;
+  }
+  100% {
+    background-size: 100%;
+  }
 }

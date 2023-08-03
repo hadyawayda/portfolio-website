@@ -3,7 +3,6 @@
 import { Popover, Transition } from "@headlessui/react"
 import { Fragment } from "react"
 import Link from "next/link"
-import { useEffect, useState } from "react"
 import "./HamburgerMenuLogo.css"
 import Download from "./Download"
 import Socials from "./Socials"
