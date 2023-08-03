@@ -5,6 +5,8 @@ import { Fragment } from "react"
 import Link from "next/link"
 import { useEffect, useState } from "react"
 import "./HamburgerMenuLogo.css"
+import Download from "./Download"
+import Socials from "./Socials"
 
 // learn react lazy loading
 // learn react suspense
@@ -46,30 +48,36 @@ const Menu = () => {
             leave="transition ease-in duration-300"
             leaveFrom="opacity-100 translate-x-0"
             leaveTo="opacity-0 translate-x-full">
-            <Popover.Panel className="fixed w-6/12 min-h-full rounded-3xl bg-white right-0 top-0">
+            <Popover.Panel className="fixed w-9/12 sm:w-6/12 min-h-full rounded-3xl bg-white right-0 top-0">
               <div className="flex flex-col">
                 <Link
                   href="/"
-                  className="pl-16 h-32 flex items-center border-b mb-6">
-                  <button className="text-white text-lg bg-black p-2.5 rounded-md tracking-wider">
+                  className="pl-10 sm:pl-16 h-32 flex items-center border-b mb-6">
+                  <button className="text-white text-lg bg-neutral-950 pb-2 p-2.5 rounded-md tracking-wider">
                     HA
                   </button>
                 </Link>
-                <Link className="pl-10" href="#projects">
-                  <button className="px-4 py-6 hover:bg-black hover:text-white font-semibold text-lg rounded-full transition-all ease-in-out duration-700">
-                    Projects
+                <Link className="pl-6 sm:pl-8" href="#projects">
+                  <button className="px-4 py-6 hover:bg-black hover:text-white font-semibold text-lg rounded-full">
+                    My Work
                   </button>
                 </Link>
-                <Link className="pl-10" href="#about">
-                  <button className="px-4 py-6 hover:bg-black hover:text-white font-semibold text-lg rounded-full transition-all ease-in-out duration-700">
+                <Link className="pl-6 sm:pl-8" href="#about">
+                  <button className="px-4 py-6 hover:bg-black hover:text-white font-semibold text-lg rounded-full">
                     About me
                   </button>
                 </Link>
-                <Link className="pl-10" href="#contact">
-                  <button className="px-4 py-6 hover:bg-black hover:text-white font-semibold text-lg rounded-full transition-all ease-in-out duration-700">
+                <Link className="pl-6 sm:pl-8 pb-5 border-b" href="#contact">
+                  <button className="px-4 py-6 hover:bg-black hover:text-white font-semibold text-lg rounded-full">
                     Contact me
                   </button>
                 </Link>
+                <div className="pl-10 flex flex-col justify-between h-full gap-6 items-start sm:justify-start mt-8 sm:pl-12 pr-4">
+                  <Download />
+                  <div className="mt-16 mb-8 sm:mb-4 sm:ml-4 ml-2">
+                    <Socials />
+                  </div>
+                </div>
               </div>
             </Popover.Panel>
           </Transition>

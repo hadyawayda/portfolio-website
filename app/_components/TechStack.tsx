@@ -5,7 +5,7 @@ import Tailwind from "./TechStackIcons/Tailwind"
 function TechStack() {
   return (
     <div className="w-full flex justify-center items-center lg:pr-8 xl:pr-20">
-      <div className="w-full justify-items-center grid grid-cols-7 gap-x-4 gap-y-6 md:mt-0 py-4 md:py-12 md:px-20 xl:px-12 xlate">
+      <div className="w-full flex flex-wrap gap-9 md:gap-10 gap-y-8 md:mt-0 py-12 px-4 sm:px-5 md:py-14 md:px-10 lg:gap-9 lg:px-0 xl:gap-12  xl:px-12 xlate justify-center">
         <Link href="https://en.wikipedia.org/wiki/HTML" className="flex">
           <Image src="/html.svg" alt="HTML" width={40} height={40} />
         </Link>

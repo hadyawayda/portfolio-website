@@ -3,6 +3,7 @@ import Link from "next/link"
 import TechStack from "./_components/TechStack"
 import Socials from "./_components/Socials"
 import Me from "./_components/Me"
+import Download from "./_components/Download"
 
 export default function Home() {
   return (
@@ -22,27 +23,12 @@ export default function Home() {
           </p>
         </div>
         <div className="flex lg:flex-col justify-center gap-20 lg:gap-0 w-full lg:justify-start items-center h-full lg:w-4/12 xl:w-5/12  order-1 lg:order-3">
-          <div className="w-72">
+          <div className="w-72 flex justify-center">
             <Me />
           </div>
           <div className="hidden md:flex flex-col">
             <Socials />
-            <Link
-              href="/Hady-Awayda-Resume.pdf"
-              rel="noopener noreferrer"
-              target="_blank"
-              download="Hady Awayda Resumé.pdf"
-              className="mt-8 animate xlate">
-              <button className="flex justify-between gap-1 px-6 py-3 lg:py-3.5 xl:py-4 lg:px-7 xl:px-10 items-center rounded-xl hover:bg-red-600 hover:text-white  bg-black font-normal lg:font-semibold lg:tracking-wider text-white transition-all duration-500 ease-in-out expanded">
-                Download Resumé
-                <Image
-                  src="/acrobat-reader.svg"
-                  alt="Acrobat Reader"
-                  width={30}
-                  height={30}
-                />
-              </button>
-            </Link>
+            <Download />
           </div>
         </div>
       </section>
