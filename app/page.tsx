@@ -16,7 +16,6 @@ export default function Home() {
       setTimeout(
         () => {
           span.classList.add("cssshow")
-          span.classList.add("cssblack")
         },
         75 * index + 1350
       )

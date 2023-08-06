@@ -70,6 +70,12 @@ a {
 .animate.vlate {
   transform: translateY(4%);
 }
+.animate.mid {
+  transform: translateX(0%);
+}
+.animate.show.mid {
+  transform: translateX(0%);
+}
 .show {
   opacity: 1;
   filter: blur(0);

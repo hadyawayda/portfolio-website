@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { useEffect } from "react"
-import Menu from "./HamMenu"
+import Menu from "./Menu"
 
 function Navbar() {
   useEffect(() => {
