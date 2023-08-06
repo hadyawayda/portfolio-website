@@ -27,8 +27,13 @@ export default function Home() {
   return (
     <main className="flex flex-col justify-start items-center w-full h-full text-lg px-4">
       <section className="flex flex-col justify-between items-center w-full gap-2">
-        <div className="lg:w-9/12 flex flex-col items-center mt-10 md:mt-15 lg:mt-20 h-full order-2">
-          <h1 className="bg-clip-text text-center lg:text-left tracking-tight animate vvvlate text-5xl md:text-6xl lg:text-7xl font-medium expanded cssgradient bg-contain">
+        <div className="flex lg:flex-col justify-center gap-20 lg:gap-0 w-full lg:justify-start items-center h-full lg:w-4/12 xl:w-5/12">
+          <div className="w-72 flex justify-center">
+            <Me />
+          </div>
+        </div>
+        <div className="w-full flex flex-col items-center mt-16 md:mt-14 lg:mt-20 h-full">
+          <h1 className="bg-clip-text text-center tracking-tight animate vvvlate text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium expanded cssgradient bg-contain">
             <span className="css">S</span>
             <span className="css">o</span>
             <span className="css">f</span>
@@ -59,11 +64,6 @@ export default function Home() {
             I love what I do, and I am very passionate about learning new
             technologies.
           </p>
-        </div>
-        <div className="flex lg:flex-col justify-center gap-20 lg:gap-0 w-full lg:justify-start items-center h-full lg:w-4/12 xl:w-5/12  order-1">
-          <div className="w-72 flex justify-center">
-            <Me />
-          </div>
         </div>
       </section>
     </main>

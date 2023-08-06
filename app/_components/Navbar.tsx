@@ -17,7 +17,7 @@ function Navbar() {
   }, [])
 
   return (
-    <div className="flex justify-between items-center w-full h-32 py-10 pr-2">
+    <div className="flex justify-between items-center w-full h-32 py-5 sm:py-7 md:py-10 pr-2">
       <Link href="/" className="animate">
         <button className="px-5 py-2 hover:bg-black hover:text-white font-semibold rounded-full transition-all ease-in-out duration-700 text-lg expanded tracking-tight">
           Hady Awayda

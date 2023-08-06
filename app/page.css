@@ -13,7 +13,7 @@
   cursor: pointer;
 }
 .animate.vvvlate {
-  transform: translateY(12%);
+  transform: translateY(20%);
 }
 .animate.show.vvvlate {
   transform: translateY(0%);
@@ -37,4 +37,32 @@
   opacity: 1;
   filter: blur(0);
   transform: translateY(0);
+}
+.stack-width {
+  width: 240px;
+}
+@media (min-width: 375px) {
+  .stack-width {
+    width: 280px;
+  }
+}
+@media (min-width: 640px) {
+  .stack-width {
+    width: 460px;
+  }
+}
+@media (min-width: 768px) {
+  .stack-width {
+    width: 600px;
+  }
+}
+@media (min-width: 1024px) {
+  .stack-width {
+    width: 740px;
+  }
+}
+@media (min-width: 1280px) {
+  .stack-width {
+    width: 920px;
+  }
 }

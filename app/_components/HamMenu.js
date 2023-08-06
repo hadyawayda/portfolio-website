@@ -18,7 +18,7 @@ const Menu = () => {
   // }
 
   return (
-    <Popover className="md:hidden z-10">
+    <Popover className="md:hidden z-10 animate mid">
       {({ open }) => (
         <>
           <Popover.Button
