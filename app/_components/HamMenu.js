@@ -18,7 +18,7 @@ const Menu = () => {
   // }
 
   return (
-    <Popover className="md:hidden z-10 animate mid">
+    <Popover className="md:hidden z-10">
       {({ open }) => (
         <>
           <Popover.Button
@@ -28,7 +28,7 @@ const Menu = () => {
             }
             // onClick={() => handleMenuToggle(open)}
           >
-            <div className="menu-btn__burger flex justify-center"></div>
+            <div className="menu-btn__burger animate mid flex justify-center"></div>
           </Popover.Button>
           <Transition
             enter="transition-opacity ease-out duration-700"
@@ -51,29 +51,29 @@ const Menu = () => {
               <div className="flex flex-col">
                 <Link
                   href="/"
-                  className="pl-10 sm:pl-16 h-32 flex items-center border-b mb-6">
-                  <button className="text-white text-lg bg-neutral-950 pb-2 p-2.5 rounded-md tracking-wider">
+                  className="pl-8 sm:pl-16 h-28 flex items-center border-b -mt-2.5 mb-6">
+                  <button className="text-white text-lg bg-neutral-950 pb-1.5 p-2 rounded-md tracking-wider">
                     HA
                   </button>
                 </Link>
-                <Link className="pl-6 sm:pl-8" href="#projects">
+                <Link className="pl-4 sm:pl-8" href="#projects">
                   <button className="px-4 py-6 hover:bg-black hover:text-white font-semibold text-lg rounded-full">
                     My Work
                   </button>
                 </Link>
-                <Link className="pl-6 sm:pl-8" href="#about">
+                <Link className="pl-4 sm:pl-8" href="#about">
                   <button className="px-4 py-6 hover:bg-black hover:text-white font-semibold text-lg rounded-full">
                     About me
                   </button>
                 </Link>
-                <Link className="pl-6 sm:pl-8 pb-5 border-b" href="#contact">
+                <Link className="pl-4 sm:pl-8 pb-5 border-b" href="#contact">
                   <button className="px-4 py-6 hover:bg-black hover:text-white font-semibold text-lg rounded-full">
                     Contact me
                   </button>
                 </Link>
-                <div className="pl-10 flex flex-col justify-between h-full gap-6 items-start sm:justify-start mt-8 sm:pl-12 pr-4">
+                <div className="pl-6 flex flex-col justify-between h-full gap-6 items-start sm:justify-start mt-12 sm:pl-12 pr-8">
                   <Download />
-                  <div className="mt-16 mb-8 sm:mb-4 sm:ml-4 ml-2">
+                  <div className="mt-16 mb-4 sm:mb-4 sm:ml-4">
                     <Socials />
                   </div>
                 </div>
