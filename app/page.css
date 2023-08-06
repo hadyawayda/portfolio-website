@@ -4,28 +4,27 @@
   background-image: linear-gradient(
     90deg,
     #e34f26 7.5%,
-    #2965f1 20%,
+    #2965f1 19.5%,
     #f7df1e 35.071%,
-    #3178c6 49.157%,
+    #3178c6 49%,
     #61dafb 66%,
-    #000 78.429%,
+    #000 78.729%,
     #06b6d4 93.614%
   );
   background-size: 100%;
   background-repeat: repeat;
-  animation: animet 1.4s ease forwards;
   cursor: pointer;
 }
 
-.cssgradient:hover {
-  animation: animet 2.75s ease forwards;
+.css {
+  opacity: 0;
+  color: transparent;
+
+  transition: all 1s;
+  transform: translateX(30%);
 }
 
-@keyframes animet {
-  0% {
-    background-size: 650%;
-  }
-  100% {
-    background-size: 100%;
-  }
+.cssshow {
+  opacity: 1;
+  transform: translateX(0%);
 }
