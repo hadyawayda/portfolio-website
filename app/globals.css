@@ -65,48 +65,48 @@ a {
 .animate {
   opacity: 0;
   transition: all 1s;
-  transform: translateY(10%);
+  transform: translateX(-10%);
 }
-.animate.mover {
-  transform: translateY(50%);
+.animate.vlate {
+  transform: translateY(4%);
 }
 .show {
   opacity: 1;
   filter: blur(0);
   transition-delay: 250ms;
-  transform: translateY(0);
+  transform: translateX(0);
 }
 .show.early {
   transition-delay: 500ms;
-  transform: translateY(0);
+  transform: translateX(0);
 }
 .show.mid {
   transition-delay: 750ms;
-  transform: translateY(0);
+  transform: translateX(0);
 }
 .show.late {
   transition-delay: 1000ms;
-  transform: translateY(0);
+  transform: translateX(0);
 }
 .show.vlate {
   transition-delay: 1250ms;
-  transform: translateY(0);
+  transform: translateX(0);
 }
 .show.vvlate {
   transition-delay: 1500ms;
-  transform: translateY(0);
+  transform: translateX(0);
 }
 .show.vvvlate {
   transition-delay: 1750ms;
-  transform: translateY(0);
+  transform: translateX(0);
 }
 .show.xlate {
   transition-delay: 2s;
-  transform: translateY(0);
+  transform: translateX(0);
 }
 .show.x2late {
   transition-delay: 2.25s;
-  transform: translateY(0);
+  transform: translateX(0);
 }
 
 @media (prefers-reduced-motion) {
