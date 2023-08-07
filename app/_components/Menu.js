@@ -11,24 +11,18 @@ import Socials from "./Socials"
 // learn react suspense
 
 const Menu = () => {
-  // const [menu, setMenu] = useState(false)
-
-  // function handleMenuToggle(o) {
-  //   setMenu(o)
-  // }
-
   return (
-    <Popover className="md:hidden z-10">
+    <Popover className="md:hidden z-50">
       {({ open }) => (
         <>
           <Popover.Button
             className={
-              "focus:outline-none flex justify-center items-center z-20 menu-btn" +
+              "focus:outline-none flex justify-center items-center z-50 menu-btn" +
               (open ? " open" : "")
-            }
-            // onClick={() => handleMenuToggle(open)}
-          >
-            <div className="menu-btn__burger animate mid flex justify-center"></div>
+            }>
+            <div className=" animate mid">
+              <div className="menu-btn__burger  flex justify-center"></div>
+            </div>
           </Popover.Button>
           <Transition
             enter="transition-opacity ease-out duration-700"
