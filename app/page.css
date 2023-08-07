@@ -13,7 +13,7 @@
   cursor: pointer;
 }
 .animate.vvvlate {
-  transform: translateY(20%);
+  transform: translateY(10%);
 }
 .animate.show.vvvlate {
   transform: translateY(0%);
@@ -35,12 +35,27 @@
   filter: blur(0);
   transform: translateY(0);
 }
-.stack-width {
-  width: 240px;
-}
-@media (min-width: 375px) {
+@media (max-width: 450px) {
+  .cssgradient {
+    font-size: 24px;
+  }
   .stack-width {
-    width: 280px;
+    width: 300px;
+    gap: 24px;
+  }
+}
+@media (max-width: 370px) {
+  .cssgradient {
+    font-size: 17px;
+  }
+  .stack-width {
+    width: 210px;
+    gap: 14px;
+  }
+}
+@media (min-width: 450px) {
+  .stack-width {
+    width: 380px;
   }
 }
 @media (min-width: 640px) {

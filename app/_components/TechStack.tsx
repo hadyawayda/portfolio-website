@@ -21,7 +21,7 @@ function TechStack() {
   }, [])
 
   return (
-    <div className="stack-width flex gap-5 sm:gap-11 md:gap-14 py-16  vvvlate justify-between items-center">
+    <div className="stack-width flex gap-8 sm:gap-11 md:gap-14 py-16 animate vvvlate justify-between items-center">
       <Link href="https://en.wikipedia.org/wiki/HTML" className="flex stack">
         <Image src="/html.svg" alt="HTML" width={40} height={40} />
       </Link>

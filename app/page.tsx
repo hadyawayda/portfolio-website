@@ -32,7 +32,7 @@ export default function Home() {
           </div>
         </div>
         <div className="w-full flex flex-col items-center mt-16 md:mt-14 lg:mt-20 h-full">
-          <h1 className="bg-clip-text text-center tracking-tight animate vvvlate text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium expanded cssgradient bg-contain">
+          <h1 className="bg-clip-text text-center tracking-tight  vvvlate text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium expanded cssgradient bg-contain">
             <span className="css">S</span>
             <span className="css">o</span>
             <span className="css">f</span>
