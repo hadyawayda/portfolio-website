@@ -29,7 +29,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "app/head.tsx",
-    "app/_components/Menu.js"
+    "app/_components/Menu.tsx"
   ],
   "exclude": ["node_modules"]
 }
