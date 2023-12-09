@@ -1,10 +1,10 @@
-import Link from "next/link"
-import Image from "next/image"
+import Link from 'next/link'
+import Image from 'next/image'
 
 function Download() {
   return (
     <Link
-      href="/Hady_Awayda-Resume.pdf"
+      href="/Hady_Awayda-Resumé.pdf"
       rel="noopener noreferrer"
       target="_blank"
       download="Hady Awayda Resumé.pdf"
