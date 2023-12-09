@@ -1,27 +1,27 @@
-"use client"
+'use client'
 
-import TechStack from "./_components/TechStack"
-import Socials from "./_components/Socials"
-import Me from "./_components/Me"
-import Download from "./_components/Download"
-import "./page.css"
-import { useEffect, useState } from "react"
-import Hady from "./_components/Hady"
+import TechStack from './_components/TechStack'
+import Socials from './_components/Socials'
+import Me from './_components/Me'
+import Download from './_components/Download'
+import './page.css'
+import { useEffect, useState } from 'react'
+// import Hady from './_components/Hady'
 
 export default function Home() {
-  const [nameAnimation, setNameAnimation] = useState(false)
+  // const [nameAnimation, setNameAnimation] = useState(false)
 
-  const onAnimationComplete = () => {
-    setNameAnimation(true)
-  }
+  // const onAnimationComplete = () => {
+  //   setNameAnimation(true)
+  // }
 
   useEffect(() => {
-    const spans = document.querySelectorAll(".css")
+    const spans = document.querySelectorAll('.css')
     const addCssClass = () => {
       spans.forEach((span, index) => {
         setTimeout(
           () => {
-            span.classList.add("cssshow")
+            span.classList.add('cssshow')
           },
           75 * index + 1350
         )
@@ -33,7 +33,7 @@ export default function Home() {
         spans.forEach((span, index) => {
           setTimeout(
             () => {
-              span.classList.remove("cssshow")
+              span.classList.remove('cssshow')
             },
             75 * index + 400
           )
@@ -47,7 +47,7 @@ export default function Home() {
 
   return (
     <main className="flex flex-col justify-start items-center w-full h-full text-lg px-4">
-      <Hady onAnimationComplete={onAnimationComplete} />
+      {/* <Hady onAnimationComplete={onAnimationComplete} /> */}
       <section className="hidden flex-col justify-between items-center w-full gap-2">
         <div className="flex lg:flex-col justify-center gap-20 lg:gap-0 w-full lg:justify-start items-center h-full lg:w-4/12 xl:w-5/12">
           <div className="w-72 flex justify-center">
