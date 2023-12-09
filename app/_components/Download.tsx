@@ -4,7 +4,7 @@ import Image from "next/image"
 function Download() {
   return (
     <Link
-      href="/Hady-Awayda-Resume.pdf"
+      href="/Hady_Awayda-Resume.pdf"
       rel="noopener noreferrer"
       target="_blank"
       download="Hady Awayda Resumé.pdf"
