@@ -2,13 +2,9 @@
 import { Fragment, useEffect, useState } from 'react'
 import { Transition } from '@headlessui/react'
 
-function Hady({
-  onAnimationComplete,
-  animationComplete,
-}: {
-  animationComplete: boolean
-  onAnimationComplete: () => void
-}) {
+function Hady({ onAnimationComplete }: { onAnimationComplete: () => void }) {
+  const [start, setStart] = useState(true)
+
   useEffect(() => {
     const names = document.querySelectorAll('.name')
     const addNameClass = () => {
@@ -40,12 +36,14 @@ function Hady({
         )
       })
     }
+
     const removeTitleClass = () => {
       setTimeout(
         () => {
           titles.forEach((span, index) => {
             setTimeout(() => {
               if (titles.length - 1 === index) {
+                setStart(false)
                 onAnimationComplete()
               }
               span.classList.remove('titleshow')
@@ -63,58 +61,53 @@ function Hady({
   }, [])
 
   return (
-    <>
-      <Transition
-        appear
-        show={!animationComplete}
-        as={Fragment}
-        enter="ease-out duration-300"
-        enterFrom="opacity-0"
-        enterTo="opacity-100"
-        leave="ease-in duration-200"
-        leaveFrom="opacity-100"
-        leaveTo="opacity-0">
-        <div className="fixed inset-0 w-full h-full flex flex-col justify-evenly items-center bg-neutral-950">
-          <h1 className="bg-clip-text bg-contain text-center tracking-wider text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium expanded">
-            <span className="name">H</span>
-            <span className="name">A</span>
-            <span className="name">D</span>
-            <span className="name">Y </span>
-            <span className="name">A</span>
-            <span className="name">W</span>
-            <span className="name">A</span>
-            <span className="name">Y</span>
-            <span className="name">D</span>
-            <span className="name">A</span>
+    <Transition
+      appear
+      show={start}
+      as={Fragment}
+      leave="ease-in duration-500"
+      leaveFrom="opacity-100"
+      leaveTo="opacity-0">
+      <div className="fixed inset-0 w-full h-full flex flex-col justify-evenly items-center bg-neutral-950">
+        <h1 className="bg-clip-text bg-contain text-center tracking-wider text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium expanded">
+          <span className="name">H</span>
+          <span className="name">A</span>
+          <span className="name">D</span>
+          <span className="name">Y </span>
+          <span className="name">A</span>
+          <span className="name">W</span>
+          <span className="name">A</span>
+          <span className="name">Y</span>
+          <span className="name">D</span>
+          <span className="name">A</span>
+        </h1>
+        <h1>
+          <h1 className="bg-clip-text bg-contain text-center tracking-wider text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium expanded ">
+            <span className="title">S</span>
+            <span className="title">o</span>
+            <span className="title">f</span>
+            <span className="title">t</span>
+            <span className="title">w</span>
+            <span className="title">a</span>
+            <span className="title">r</span>
+            <span className="title">e </span>
+            <span className="title">& </span>
+            <span className="title">W</span>
+            <span className="title">e</span>
+            <span className="title">b </span>
+            <span className="title">D</span>
+            <span className="title">e</span>
+            <span className="title">v</span>
+            <span className="title">e</span>
+            <span className="title">l</span>
+            <span className="title">o</span>
+            <span className="title">p</span>
+            <span className="title">e</span>
+            <span className="title">r</span>
           </h1>
-          <h1>
-            <h1 className="bg-clip-text bg-contain text-center tracking-wider text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium expanded ">
-              <span className="title">S</span>
-              <span className="title">o</span>
-              <span className="title">f</span>
-              <span className="title">t</span>
-              <span className="title">w</span>
-              <span className="title">a</span>
-              <span className="title">r</span>
-              <span className="title">e </span>
-              <span className="title">& </span>
-              <span className="title">W</span>
-              <span className="title">e</span>
-              <span className="title">b </span>
-              <span className="title">D</span>
-              <span className="title">e</span>
-              <span className="title">v</span>
-              <span className="title">e</span>
-              <span className="title">l</span>
-              <span className="title">o</span>
-              <span className="title">p</span>
-              <span className="title">e</span>
-              <span className="title">r</span>
-            </h1>
-          </h1>
-        </div>
-      </Transition>
-    </>
+        </h1>
+      </div>
+    </Transition>
   )
 }
 

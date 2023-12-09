@@ -14,7 +14,7 @@ export default function Home() {
   const onAnimationComplete = () => {
     setTimeout(() => {
       setAnimationComplete(true)
-    }, 1000)
+    }, 500)
   }
 
   useEffect(() => {
@@ -49,9 +49,7 @@ export default function Home() {
 
   return (
     <main className="flex flex-col justify-start items-center w-full h-full text-lg px-4">
-      {!animationComplete && (
-        <Hady {...{ onAnimationComplete, animationComplete }} />
-      )}
+      {!animationComplete && <Hady {...{ onAnimationComplete }} />}
       {animationComplete && (
         <section className="w-full flex-col justify-between items-center gap-2">
           <div className="w-full flex justify-center items-center">
