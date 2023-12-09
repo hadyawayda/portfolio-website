@@ -6,15 +6,16 @@ import Me from './_components/Me'
 import Download from './_components/Download'
 import './page.css'
 import { useEffect, useState } from 'react'
-// import Hady from './_components/Hady'
+import Hady from './_components/Hady'
 
 export default function Home() {
-  // const [nameAnimation, setNameAnimation] = useState(false)
-  const [hidden, setHidden] = useState(false)
+  const [animationComplete, setAnimationComplete] = useState(false)
 
-  // const onAnimationComplete = () => {
-  //   setNameAnimation(true)
-  // }
+  const onAnimationComplete = () => {
+    setTimeout(() => {
+      setAnimationComplete(true)
+    }, 1000)
+  }
 
   useEffect(() => {
     const spans = document.querySelectorAll('.css')
@@ -44,12 +45,14 @@ export default function Home() {
 
     addCssClass()
     removeCssClass()
-  }, [])
+  }, [animationComplete])
 
   return (
     <main className="flex flex-col justify-start items-center w-full h-full text-lg px-4">
-      {/* <Hady onAnimationComplete={onAnimationComplete} /> */}
-      {!hidden && (
+      {!animationComplete && (
+        <Hady {...{ onAnimationComplete, animationComplete }} />
+      )}
+      {animationComplete && (
         <section className="w-full flex-col justify-between items-center gap-2">
           <div className="w-full flex justify-center items-center">
             <div className="w-full flex justify-center">

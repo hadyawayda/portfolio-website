@@ -1,8 +1,14 @@
-import { useEffect, useState } from 'react'
+'use client'
+import { Fragment, useEffect, useState } from 'react'
+import { Transition } from '@headlessui/react'
 
-function Hady({ onAnimationComplete }: { onAnimationComplete: () => void }) {
-  const [hidden, setHidden] = useState<boolean>(false)
-
+function Hady({
+  onAnimationComplete,
+  animationComplete,
+}: {
+  animationComplete: boolean
+  onAnimationComplete: () => void
+}) {
   useEffect(() => {
     const names = document.querySelectorAll('.name')
     const addNameClass = () => {
@@ -38,8 +44,10 @@ function Hady({ onAnimationComplete }: { onAnimationComplete: () => void }) {
       setTimeout(
         () => {
           titles.forEach((span, index) => {
-            console.log("I'm Done")
             setTimeout(() => {
+              if (titles.length - 1 === index) {
+                onAnimationComplete()
+              }
               span.classList.remove('titleshow')
             }, 100 * index)
           })
@@ -56,8 +64,17 @@ function Hady({ onAnimationComplete }: { onAnimationComplete: () => void }) {
 
   return (
     <>
-      {hidden && (
-        <div>
+      <Transition
+        appear
+        show={!animationComplete}
+        as={Fragment}
+        enter="ease-out duration-300"
+        enterFrom="opacity-0"
+        enterTo="opacity-100"
+        leave="ease-in duration-200"
+        leaveFrom="opacity-100"
+        leaveTo="opacity-0">
+        <div className="fixed inset-0 w-full h-full flex flex-col justify-evenly items-center bg-neutral-950">
           <h1 className="bg-clip-text bg-contain text-center tracking-wider text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium expanded">
             <span className="name">H</span>
             <span className="name">A</span>
@@ -96,7 +113,7 @@ function Hady({ onAnimationComplete }: { onAnimationComplete: () => void }) {
             </h1>
           </h1>
         </div>
-      )}
+      </Transition>
     </>
   )
 }
