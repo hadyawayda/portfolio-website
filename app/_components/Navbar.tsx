@@ -5,16 +5,16 @@ import { useEffect } from "react"
 import Menu from "./Menu"
 
 function Navbar() {
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show")
-        }
-      })
-    })
-    document.querySelectorAll(".animate").forEach((el) => observer.observe(el))
-  }, [])
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver((entries) => {
+  //     entries.forEach((entry) => {
+  //       if (entry.isIntersecting) {
+  //         entry.target.classList.add("show")
+  //       }
+  //     })
+  //   })
+  //   document.querySelectorAll(".animate").forEach((el) => observer.observe(el))
+  // }, [])
 
   return (
     <div className="flex justify-between items-center w-full h-32 py-5 sm:py-7 md:py-10 pr-2">

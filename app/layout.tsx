@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`antialiased flex min-h-full min-w-full flex-col items-center justify-between font-semibold text-sm scrollbar-none px-2 sm:px-8 md:px-12 lg:px-16 xl:px-20`}>
+        className={`antialiased bg-neutral-950 text-gray-200 flex min-h-full min-w-full flex-col items-center justify-between font-semibold text-sm scrollbar-none px-2 sm:px-8 md:px-12 lg:px-16 xl:px-20`}>
         <Navbar />
         {children}
         <Footer />
