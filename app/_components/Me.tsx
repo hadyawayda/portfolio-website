@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from 'next/image'
 
 function Me() {
   return (
@@ -7,7 +7,7 @@ function Me() {
       alt="Me"
       width={600}
       height={600}
-      className="rounded-full w-44 sm:w-60 md:w-full mt-4 md:mt-6 animate vlate"
+      className="rounded-full w-44 sm:w-60 md:w-72 mt-4 md:mt-6 animate vlate"
     />
   )
 }

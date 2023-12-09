@@ -38,7 +38,7 @@ function Hady({ onAnimationComplete }: { onAnimationComplete: () => void }) {
       setTimeout(
         () => {
           titles.forEach((span, index) => {
-            // if (titles.length - 1 === index) setHidden(true)
+            console.log("I'm Done")
             setTimeout(() => {
               span.classList.remove('titleshow')
             }, 100 * index)
