@@ -1,7 +1,7 @@
 "use client"
 
 import { Popover, Transition } from "@headlessui/react"
-import { Fragment } from "react"
+import { Fragment, useState } from "react"
 import Link from "next/link"
 import "./HamburgerMenuLogo.css"
 import Download from "./Download"
@@ -11,9 +11,11 @@ import Socials from "./Socials"
 // learn react suspense
 
 const Menu = () => {
+  const [open, setOpen] = useState(false)
+
   return (
     <Popover className="md:hidden z-50">
-      {({ open }) => (
+      {({ open }: { open: boolean }) => (
         <>
           <Popover.Button
             className={
