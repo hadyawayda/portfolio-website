@@ -1,10 +1,10 @@
-import Link from "next/link"
-import Linkedin from "./SocialIcons/Linkedin"
-import Github from "./SocialIcons/Github"
-import Leetcode from "./SocialIcons/Leetcode"
-import Hackerrank from "./SocialIcons/Hackerrank"
-import FrontEndMentor from "./SocialIcons/FrontEndMentor"
-import CSSBattle from "./SocialIcons/Cssbattle"
+import Link from 'next/link'
+import Linkedin from './SocialIcons/Linkedin'
+import Github from './SocialIcons/Github'
+import Leetcode from './SocialIcons/Leetcode'
+import Hackerrank from './SocialIcons/Hackerrank'
+import FrontEndMentor from './SocialIcons/FrontEndMentor'
+import CSSBattle from './SocialIcons/Cssbattle'
 
 function Socials() {
   return (
@@ -44,13 +44,13 @@ function Socials() {
           aria-label="Hackerrank">
           <div
             className="w-6 h-6 md:w-8 md:h-8 pt-0.5 flex justify-center items-center"
-            style={{ paddingLeft: 2 + "px" }}>
+            style={{ paddingLeft: 2 + 'px' }}>
             <Hackerrank />
           </div>
         </Link>
         <Link
           className="w-10 h-10 flex justify-center items-center"
-          href="https://www.frontendmentor.io/profile/hAdy994"
+          href="https://www.frontendmentor.io/profile/hadyawayda"
           target="_blank"
           aria-label="Frontend Mentor">
           <div className="w-5 h-5 md:w-7 md:h-7 pl-px pt-0.5 flex justify-center items-center">
